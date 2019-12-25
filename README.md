@@ -1,3 +1,10 @@
+# Simple react-typescript-demo
+This is a simple implementation of a building with an elevator. This was made using:
+  - React
+  - Typescript
+  - Material-UI
+  - React hooks (for state)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -16,7 +16,7 @@ export const Floor = ({
     variant={'outlined'}
     color={isCurrentFloor ? 'primary' : isInQueue ? 'default' : 'inherit'}
     onClick={() => enqueue(floorNum)}
-    disabled={isInQueue}
+    disabled={isInQueue || isCurrentFloor}
   >
     {floorNum}
   </Button>

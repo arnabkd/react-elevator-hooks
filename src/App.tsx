@@ -5,7 +5,7 @@ import { Building } from './Building'
 const App: React.FC = () => {
   return (
     <div className='App'>
-      <Building numFloors={100} />
+      <Building numFloors={10} />
     </div>
   )
 }

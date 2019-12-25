@@ -25,7 +25,11 @@ export const enqueue = (
   floor: number,
   queue: number[],
   setQueue: (v: number[]) => void,
-) => setQueue([...queue, floor])
+) => {
+  if (!queue.includes(floor)) {
+    setQueue([...queue, floor])
+  }
+}
 
 export const consumeClosestNode = (
   currentFloor: number,

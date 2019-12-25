@@ -30,7 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tslint": "tslint -t verbose --project ."
+    "tslint": "tslint --exclude src/serviceWorker.ts --exclude src/setupTests.ts --project ."
   },
   "eslintConfig": {
     "extends": "react-app"

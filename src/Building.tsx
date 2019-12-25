@@ -1,13 +1,7 @@
 import React, { useState } from 'react'
 import { Floor } from './Floor'
 import Grid from '@material-ui/core/Grid'
-import {
-  Paper,
-  Stepper,
-  Step,
-  StepLabel,
-  Button,
-} from '@material-ui/core'
+import { Paper, Stepper, Step, StepLabel, Button } from '@material-ui/core'
 import { enqueue, consumeClosestNode, getNearestStop } from './utils'
 
 export const Building = ({ numFloors }: { numFloors: number }) => {
@@ -16,8 +10,7 @@ export const Building = ({ numFloors }: { numFloors: number }) => {
     .map((_, i) => i + 1)
   const [currentFloor, setCurrentFloor] = useState<number>(floors[0])
   const [queue, setQueue] = useState<number[]>([])
-  const addFloorToQueue = (floor: number) =>
-    enqueue(floor, queue, setQueue)
+  const addFloorToQueue = (floor: number) => enqueue(floor, queue, setQueue)
   const goToNextFloor = () =>
     consumeClosestNode(currentFloor, setCurrentFloor, queue, setQueue)
 

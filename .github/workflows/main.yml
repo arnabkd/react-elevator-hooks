@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: CultureHQ/actions-yarn@v1.0.1
+    - name: Yarn install and build
+      run: |
+        yarn install,
+        yarn build.

@@ -16,6 +16,7 @@ const closestToCurrent = (from: number) => (x: number, y: number) => {
 }
 
 // Next stop is either the next intermediate stop or the destination
+// Note: this ignores closer nodes in a different direction, so we don't get starvation
 export const getNearestStop = (from: number, queue: number[]): number =>
   queue
     .filter(floor => canStopOnWay(from, queue[0], floor))

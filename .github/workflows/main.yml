@@ -6,13 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Prepare
-        run: npm ci
       - name: Lint
-        uses: mooyoul/tslint-actions@v1.1.1
+        uses: borales/actions-yarn@v2.0.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pattern: '*.ts'
+          cmd: tslint
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command

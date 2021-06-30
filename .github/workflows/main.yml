@@ -7,14 +7,14 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: install
-        uses: borales/actions-yarn@v2.0.0
+        uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # will run `yarn install` command
       - name: lint
-        uses: borales/actions-yarn@v2.0.0
+        uses: borales/actions-yarn@v2.3.0
         with:
           cmd: tslint # will run `yarn tslint` command
       - name: build
-        uses: borales/actions-yarn@v2.0.0
+        uses: borales/actions-yarn@v2.3.0
         with:
           cmd: build # will run `yarn build` command
